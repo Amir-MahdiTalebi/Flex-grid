@@ -90,7 +90,7 @@ body {
     justify-items: center;
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 2.5rem 5rem;
 }
 .product{
