@@ -1,0 +1,135 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* Root */
+:root {
+    --primaryColor: #6d28d9;
+    --secondaryColor: #ede9fe;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainRed: #db2777;
+  --bodyColor: #f6f6f6;
+}
+/* HTML */
+html {
+    font-size: 62.5%;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+/* Body */
+body {
+    color: var(--mainBlack);
+    background-color: var(--bodyColor);
+}
+/* NavBar */
+.nav-bar {
+    background-color: var(--secondaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav__center {
+    max-width: 1600px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    margin-top: .3rem;
+}
+.main-title {
+    font-size: 2.8rem;
+}
+.icon {
+    color: var(--primaryColor);
+    font-size: 2.8rem;
+    cursor: pointer;
+}
+.cart-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart__num{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -1.2rem;
+    right: 0.8rem;
+    background-color: var(--mainRed);
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+/* Products */
+.products__title {
+    text-align: center;
+    padding: 3rem 0 2rem;
+}
+.products {
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.products__center {
+    width: 90%;
+    max-width: 1600px;
+    justify-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem 5rem;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mainWhite);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.product__inf{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+.product__img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.cart-add-btn{
+    outline: 0;
+    border: 0;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-radius: 4px;
+    padding: 1rem 4rem;
+    font-family: inherit;
+    cursor: pointer;
+    margin: 1rem 0 2rem;
+}
+
+/* Media Quaries */
+@media screen and (min-width:450px){
+    .nav__center,
+    .products__center{
+        width: 95%;
+    }
+}
